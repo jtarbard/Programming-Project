@@ -8,8 +8,8 @@ int punctuation_count = 0;
 
 char user_input[300];
 
-void scan(){
-  printf("> ");
+void scan(char user_name[20]){
+  printf("> %s: ", user_name);
   fgets(user_input, 300, stdin);
 }
 
