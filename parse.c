@@ -30,7 +30,7 @@ void split(){
       word_count++;
       str_i = 0;
     }
-    else if(user_input[i] == '.' || user_input[i] == '?'){
+    else if(strchr("!?.",user_input[i])){
       //punctuation
       punctuation[punctuation_count] = user_input[i];
       punctuation_count++;
@@ -46,27 +46,21 @@ void split(){
   }
 }
 
-int main( int argc, char **argv ) {
-
-  scan();
-  split();
-
-// debugging
-  #ifdef DEBUG
-    printf("\nDEBUGGING ENABLED -\n-------------------\n" );
-    printf("input contents: %s", user_input);
-    printf("words[0] contents: %s\n", words[0]);
-    printf("punc[0] contents: %c\n", punctuation[0]);
-    printf("-------------------\n");
-    printf("word array contents with indexs:\n");
-    int i, j;
-    for(i = 0; i < 31; i++){
-      printf("words[%d]='%s',\n", i, words[i]);
-    }
-    printf("-------------------\n");
-    for(j = 0; j < 11; j++){
-      printf("punctuation[%d]='%c',\n", j, punctuation[j]);
-    }
-    printf("--------END--------\n");
-  #endif
+void parse_debug(){
+  // debugging
+  printf("\nDEBUGGING ENABLED -\n-------------------\n" );
+  printf("input contents: %s", user_input);
+  printf("words[0] contents: %s\n", words[0]);
+  printf("punc[0] contents: %c\n", punctuation[0]);
+  printf("-------------------\n");
+  printf("word array contents with indexs:\n");
+  int i, j;
+  for(i = 0; i < 31; i++){
+    printf("words[%d]='%s',\n", i, words[i]);
+  }
+  printf("-------------------\n");
+  for(j = 0; j < 11; j++){
+    printf("punctuation[%d]='%c',\n", j, punctuation[j]);
+  }
+  printf("--------END--------\n");
 }
