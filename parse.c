@@ -1,28 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 
-char words[30][30];
+char words[100][30];
 char punctuation[10];
+char user_input[302];
+
 int word_count = 0;
 int punctuation_count = 0;
 
-char user_input[300];
 
-void scan(char user_name[20]){
+int scan(char user_name[20]){
   printf("> %s: ", user_name);
-  fgets(user_input, 300, stdin);
+  fgets(user_input, 302, stdin);
+
+  if(strrchr(user_input, '\n') != NULL){return 0;} //within buffer
+  else{return 1;} //exceeded buffer
 }
 
 void split(){
   int i;
   int str_i = 0;
 
-  for(i = 0; i < 301; i++){
+  for(i = 0; i < 303; i++){
     if(user_input[i] == '\0'){
       //end of input
       word_count = 0;
       punctuation_count = 0;
-      i = 301; //break
+      i = 303; //break
     }
     else if(user_input[i] == ' '){
       //end of word
@@ -55,7 +59,7 @@ void parse_debug(){
   printf("-------------------\n");
   printf("word array contents with indexs:\n");
   int i, j;
-  for(i = 0; i < 31; i++){
+  for(i = 0; i < 101; i++){
     printf("words[%d]='%s',\n", i, words[i]);
   }
   printf("-------------------\n");

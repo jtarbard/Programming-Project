@@ -1,8 +1,8 @@
 //data structures
-char words[30][30];
+char words[100][30];
 char punctuation[10];
 
 //functions
-void scan();
+int scan();
 void split();
 void parse_debug();

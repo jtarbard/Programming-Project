@@ -35,8 +35,14 @@ int main( int argc, char **argv ) {
   welcome();
   setup();
   //parse functions
-  scan(user_name);
+  int buffer;
+  buffer = scan(user_name);
   split();
+
+  if(buffer == 1){
+    printf("> Ada: TEMP RESPONSE - buffer exceeded. Limit 300 characters.\n");
+  }
+
   //end of chat line
   printf("--Chat:Ended------------\n");
 }
