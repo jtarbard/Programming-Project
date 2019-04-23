@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/interface.dir/interface.c.o  -o interface 
