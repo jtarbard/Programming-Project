@@ -17,8 +17,8 @@ int main( int argc, char **argv ) {
     printf("> Ada: TEMP RESPONSE - buffer exceeded. Limit 300 characters.\n");
   }
 
+  run();
   getTopics();
-
   //end of chat line
   printf("--Chat:Ended------------\n");
   // debug();

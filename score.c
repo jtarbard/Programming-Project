@@ -1,18 +1,19 @@
 #include "parse.h"
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-char user_topics[5][20];
+char *user_topics[5];
 int user_topics_index = 0;
 
-char subject[2][6][20] = {
-  {"ada","you","your","you're"},
-  {"i","im","my","mine","me",'\0'}
-}; //who is the sentence about
+char *subject[2][5] = {
+  {"ada","you","your","you're", ""},
+  {"i","im","my","mine","me"}
+};
 
-char question[9][20] = {"what","when","where","which","who","whoose","why","how",'?'}; //is it a question
+char *question[9] = {"what","when","where","which","who","whoose","why","how","?"};
 
-char topics[6][4][20] = {
+char *topics[6][4] = {
   {"name", "age", "children", "colour"}, //0 - personal information
   {"film", "movie", "", ""}, //1 - films
   {"tv", "television", "", ""}, //2 - tv
@@ -21,25 +22,44 @@ char topics[6][4][20] = {
   {"book", "novel", "", ""} //5 - books
 };
 
+void getSubject(){
+  int user, ada, i, j;
+  word_type * current = word_head;
+
+  while(current != NULL){
+    for(i = 0; i < 5; i++){
+      if(subject[i][j][0] != '\0'){
+        if(strstr(current->word, subject[0][i]) != NULL){user++;}
+      }
+      current = current->next;
+    }
+
+    for(j = 0; j < 5; j++){
+      if(subject[i][j][0] != '\0'){
+        if(strstr(current->word, subject[0][j]) != NULL){ada++;}
+      }
+      current = current->next;
+    }
+  }
+}
+
 void getTopics(){
   int i, j;
-  int k = 0;
-  do{
-    for(i = 0; i <= 5; i++){
-      for(j = 0; j <= 4; j++){
-        if(topics[i][j][0] == '\0'){
-          //pass
-        }
-        else{
-          if(strstr(words[k], topics[i][j]) != NULL){
-            memcpy(user_topics[user_topics_index], topics[i][j], strlen(user_topics[user_topics_index])+1);
-            user_topics_index++;
-            i = 5; //break
-            j = 5; //break
+  word_type * current = word_head;
+
+  while(current->next != NULL){
+    printf("while: %s\n", current->word);
+    for(i = 0; i < 6; i++){
+      for(j = 0; j < 5; j++){
+        if(topics[i][j][0] != '\0'){
+          if(strstr(current->word, topics[i][j]) != NULL){
+            user_topics[user_topics_index] = current->word;
+            i = 6;
+            j = 5;
           }
         }
       }
     }
-    k++;
-  } while(k < 99);
+    current = current->next;
+  }
 }

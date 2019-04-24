@@ -11,8 +11,10 @@
 /home/jasmine/Documents/git/ada-chatbot/score.c
 parse.h
 /home/jasmine/Documents/git/ada-chatbot/parse.h
-string.h
--
 stdio.h
+-
+stdlib.h
+-
+string.h
 -
 
