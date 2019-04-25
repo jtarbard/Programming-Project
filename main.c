@@ -19,7 +19,6 @@ int main( int argc, char **argv ) {
   score_topics();
   //end of chat line
   printf("--Chat:Ended------------\n");
-  // debug();
   parse_free();
 
   return 0;

@@ -27,16 +27,16 @@ int scan(char user_name[20]){
 }
 
 void split(){
-  int i;
+  int i = 0;
   int string_index = 0;
   char *string;
 
   //allocate to heap
   word_head = malloc(sizeof(word_type));
 
-  for(i = 0; i < 303; i++){
+  while(user_input[i] != '\0'){
     //end of word
-    if(user_input[i] == ' ' || user_input[i] == '\0'){
+    if(user_input[i] == ' '){
       //define and allocate to heap
       word_type * new_word = NULL;
       new_word = (struct word_struct*)malloc(sizeof(struct word_struct));
@@ -46,7 +46,7 @@ void split(){
       word_head = new_word;
       //end of stream
       if(user_input[i] == '\0'){
-        i = 303;
+        i = 302;
       }
       for(string_index; string_index != 0 ; string_index--){
         string[string_index] = 0;
@@ -64,13 +64,14 @@ void split(){
       string[string_index] = user_input[i];
       string_index++;
     }
+    i++;
   }
 }
 
 int parse_free(){
   word_type * temp;
 
-  while(temp != NULL){
+  while(temp->next != NULL){
     temp = word_head;
     free(word_head->word);
     word_head = word_head->next;
