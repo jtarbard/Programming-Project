@@ -1,3 +1,4 @@
 char user_name[20];
-void welcome();
-void setup();
+int interface();
+int print_welcome();
+int get_username();

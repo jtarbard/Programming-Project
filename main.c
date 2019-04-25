@@ -1,26 +1,26 @@
+#include "interface.h"
 #include "parse.h"
 #include "score.h"
-#include "interface.h"
 #include <stdio.h>
 #include <string.h>
 
 int main( int argc, char **argv ) {
   //intro
-  welcome();
-  setup();
-  //parse functions
-  int buffer;
-  buffer = scan(user_name);
+  interface();
+
+  scan(user_name);
   split();
 
-  if(buffer == 1){
-    printf("> Ada: TEMP RESPONSE - buffer exceeded. Limit 300 characters.\n");
-  }
+  // printf("question score: %d\n", score_question());
+  // printf("subject score: %d\n", score_subject());
 
-  run();
-  getTopics();
+  score_question();
+  score_subject();
+  score_topics();
   //end of chat line
   printf("--Chat:Ended------------\n");
   // debug();
+  parse_free();
 
+  return 0;
 }

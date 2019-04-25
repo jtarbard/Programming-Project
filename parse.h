@@ -7,16 +7,11 @@ typedef struct word_struct {
 
 word_type * word_head;
 
-typedef struct punc_struct {
-    char punc;
-    struct punc_struct * next;
-} punc_type;
-
-punc_type * punc_head;
-
 char user_input[302];
+int punctuation;
 
 //functions
 int scan();
 void split();
 void run();
+int parse_free();

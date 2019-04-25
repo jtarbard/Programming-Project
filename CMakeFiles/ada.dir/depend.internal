@@ -3,12 +3,14 @@
 
 CMakeFiles/ada.dir/interface.c.o
  /home/jasmine/Documents/git/ada-chatbot/interface.c
+ /home/jasmine/Documents/git/ada-chatbot/parse.h
 CMakeFiles/ada.dir/main.c.o
  /home/jasmine/Documents/git/ada-chatbot/interface.h
  /home/jasmine/Documents/git/ada-chatbot/main.c
  /home/jasmine/Documents/git/ada-chatbot/parse.h
  /home/jasmine/Documents/git/ada-chatbot/score.h
 CMakeFiles/ada.dir/parse.c.o
+ /home/jasmine/Documents/git/ada-chatbot/interface.h
  /home/jasmine/Documents/git/ada-chatbot/parse.c
 CMakeFiles/ada.dir/score.c.o
  /home/jasmine/Documents/git/ada-chatbot/parse.h
