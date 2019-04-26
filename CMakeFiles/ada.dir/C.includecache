@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/jasmine/Documents/git/ada-chatbot/interface.c
+parse.h
+/home/jasmine/Documents/git/ada-chatbot/parse.h
+stdio.h
+-
+string.h
+-
+
 /home/jasmine/Documents/git/ada-chatbot/interface.h
 
 /home/jasmine/Documents/git/ada-chatbot/parse.c
@@ -17,4 +25,6 @@ stdlib.h
 -
 string.h
 -
+
+/home/jasmine/Documents/git/ada-chatbot/parse.h
 

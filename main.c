@@ -8,18 +8,17 @@
 int main( int argc, char **argv ) {
   //intro
   interface();
-
-  scan(user_name);
+  //
+  scan();
   split();
-
-  // printf("question score: %d\n", score_question());
-  // printf("subject score: %d\n", score_subject());
-
+  //
+  // // printf("question score: %d\n", score_question());
+  // // printf("subject score: %d\n", score_subject());
+  //
   score_topics();
   get_response();
-  //end of chat line
+  // //end of chat line
   printf("--Chat:Ended------------\n");
   parse_free();
-
   return 0;
 }

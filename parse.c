@@ -12,8 +12,9 @@ word_type * word_head = NULL;
 //inital input char array
 char user_input[302];
 int punctuation = 0;
+char user_name[20];
 
-int scan(char user_name[20]){
+int scan(){
   printf("> %s: ", user_name);
   fgets(user_input, 302, stdin);
 
@@ -27,10 +28,12 @@ int scan(char user_name[20]){
 
 void split(){
   int i = 0;
-  int string_index = 0;
   char *string;
+  string = malloc(sizeof(sizeof(char) * 30));
+  //strcat workaround
+  char strcat_fix[2];
+  strcat_fix[1] = '\0';
 
-  //allocate to heap
   word_head = malloc(sizeof(word_type));
 
   while(user_input[i] != '\0'){
@@ -40,16 +43,12 @@ void split(){
       word_type * new_word = NULL;
       new_word = (struct word_struct*)malloc(sizeof(struct word_struct));
 
-      new_word->word = strdup(string);
+      new_word->word = string;
       new_word->next = word_head;
       word_head = new_word;
       //end of stream
       if(user_input[i] == '\0'){
         i = 302;
-      }
-      for(string_index; string_index != 0 ; string_index--){
-        string[string_index] = 0;
-        string[string_index-1] = '\0';
       }
     }
     // found punctuation
@@ -58,22 +57,20 @@ void split(){
     }
     //found new character
     else{
-      string[string_index] = user_input[i];
-      string_index++;
+      strcat_fix[0] = user_input[i];
+      strcat(string, strcat_fix);
     }
     i++;
   }
+  free(string);
 }
 
-int parse_free(){
-  word_type * temp;
+void parse_free(){
+  word_type * list_ptr;
 
-  while(temp != NULL){
-    temp = word_head;
-    free(word_head->word);
-    word_head = word_head->next;
-    free(temp);
+  while (word_head) {
+  list_ptr = word_head;
+  word_head = list_ptr->next;
+  free(list_ptr);
   }
-
-  return 0;
 }
