@@ -26,6 +26,7 @@ int response_calc(response_type arr[], int index){
   int ada, question;
   ada = score_subject();
   question = score_question();
+  
   printf("scores: ada %d, question: %d\n", ada, question);
   if(ada == 0){
     if(question == 0){

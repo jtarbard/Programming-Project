@@ -43,9 +43,11 @@ void split(){
       word_type * new_word = NULL;
       new_word = (struct word_struct*)malloc(sizeof(struct word_struct));
 
-      new_word->word = string;
+      new_word->word = strdup(string);
       new_word->next = word_head;
       word_head = new_word;
+
+      strcpy(string, "");
       //end of stream
       if(user_input[i] == '\0'){
         i = 302;

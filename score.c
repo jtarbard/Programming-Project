@@ -86,29 +86,32 @@ int score_subject(){
 
 void score_topics(){
   int i, j, found = 0;
-  struct word_struct * current = word_head;
+  struct word_struct * current;
+  current = word_head;
 
   while(found == 0 && current != NULL){
-    printf("%s\n", current->word);
     for(i = 0; i < 6; i++){
       for(j = 0; j < 4; j++){
-        // if(topics[i][j][0] != '\0'){
-          if(strstr(current->word, topics[i][j]) != NULL){
-
+        printf("topics[%d][%d]: %s - current: %s\n", i, j, topics[i][j], current->word);
+          if(topics[i][j] = current->word){
+            printf("found word!\n" );
             user_topics_index = j;
             if(i == 0){
               user_topics = "personal";
             }
-            if(i == 1){
+            else if(i == 1){
               user_topics = "films";
             }
-            if(i == 2){
+            else if(i == 2){
               user_topics = "tv";
             }
             else if(i == 3){
-              user_topics = "games";
+              user_topics = "music";
             }
             else if(i == 4){
+              user_topics = "games";
+            }
+            else if(i == 5){
               user_topics = "books";
             }
             else{
@@ -120,7 +123,6 @@ void score_topics(){
             i = 7;
             j = 5;
           }
-        // }
       }
     }
     current = current->next;
