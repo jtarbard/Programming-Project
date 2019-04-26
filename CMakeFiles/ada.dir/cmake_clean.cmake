@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ada.dir/interface.c.o"
   "CMakeFiles/ada.dir/parse.c.o"
   "CMakeFiles/ada.dir/score.c.o"
+  "CMakeFiles/ada.dir/interpret.c.o"
   "ada.pdb"
   "ada"
 )

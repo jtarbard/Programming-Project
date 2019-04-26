@@ -4,7 +4,11 @@
 CMakeFiles/ada.dir/interface.c.o: interface.c
 CMakeFiles/ada.dir/interface.c.o: parse.h
 
+CMakeFiles/ada.dir/interpret.c.o: interpret.c
+CMakeFiles/ada.dir/interpret.c.o: score.h
+
 CMakeFiles/ada.dir/main.c.o: interface.h
+CMakeFiles/ada.dir/main.c.o: interpret.h
 CMakeFiles/ada.dir/main.c.o: main.c
 CMakeFiles/ada.dir/main.c.o: parse.h
 CMakeFiles/ada.dir/main.c.o: score.h

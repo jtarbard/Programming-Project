@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *user_topics[10];
+char *user_topics;
 int user_topics_index = 0;
+int blind = 1;
 
 char *subject[2][5] = {
   {"ur","your","you're", "you", "ada"},
@@ -39,11 +40,16 @@ int score_question(){
         }
       current = current->next;
     }
-    return score;
   }
   //question mark found
   else{
-    return 10;
+    return 1;
+  }
+  if(score > 0){
+    return 1;
+  }
+  else{
+    return 0;
   }
 }
 
@@ -56,8 +62,8 @@ int score_subject(){
       for(j = 0; j < 5; j++){
         if(subject[i][j] != "\0"){
           if(strstr(subject[i][j], current->word) != NULL){
-            if(i == 0){ada += j;}
-            else if(i == 1){user += j;}
+            if(i == 0){ada += 5-j;}
+            else if(i == 1){user += 5-j;}
             i = 2;
             j = 5;
           }
@@ -68,30 +74,53 @@ int score_subject(){
   }
   //score
   if(ada == user){
-    return 0; //no subject found
+    return 2; //no subject found
   }
   else if(ada > user){
     return 1; //subject is ada
   }
   else{
-    return 2; //subject is user
+    return 0; //subject is user
   }
 }
 
 void score_topics(){
-  int i, j;
+  int i, j, found = 0;
   struct word_struct * current = word_head;
 
-  while(current->next != NULL){
+  while(found == 0 && current != NULL){
+    printf("%s\n", current->word);
     for(i = 0; i < 6; i++){
-      for(j = 0; j < 5; j++){
-        if(topics[i][j][0] != '\0'){
+      for(j = 0; j < 4; j++){
+        // if(topics[i][j][0] != '\0'){
           if(strstr(current->word, topics[i][j]) != NULL){
-            user_topics[user_topics_index] = current->word;
-            i = 6;
+
+            user_topics_index = j;
+            if(i == 0){
+              user_topics = "personal";
+            }
+            if(i == 1){
+              user_topics = "films";
+            }
+            if(i == 2){
+              user_topics = "tv";
+            }
+            else if(i == 3){
+              user_topics = "games";
+            }
+            else if(i == 4){
+              user_topics = "books";
+            }
+            else{
+              printf("err\n");
+            }
+
+            blind = 0;
+            found = 1;
+            i = 7;
             j = 5;
           }
-        }
+        // }
       }
     }
     current = current->next;

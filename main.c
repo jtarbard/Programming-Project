@@ -1,4 +1,5 @@
 #include "interface.h"
+#include "interpret.h"
 #include "parse.h"
 #include "score.h"
 #include <stdio.h>
@@ -14,9 +15,8 @@ int main( int argc, char **argv ) {
   // printf("question score: %d\n", score_question());
   // printf("subject score: %d\n", score_subject());
 
-  score_question();
-  score_subject();
   score_topics();
+  get_response();
   //end of chat line
   printf("--Chat:Ended------------\n");
   parse_free();

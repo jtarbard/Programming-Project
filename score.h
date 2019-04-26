@@ -1,4 +1,6 @@
-// char *user_topics[10];
+char *user_topics;
+int user_topics_index;
+int blind;
 int score_subject();
 int score_question();
 void score_topics();

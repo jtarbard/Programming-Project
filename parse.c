@@ -9,7 +9,6 @@ typedef struct word_struct {
     struct word_struct * next;
 } word_type;
 word_type * word_head = NULL;
-
 //inital input char array
 char user_input[302];
 int punctuation = 0;
@@ -36,7 +35,7 @@ void split(){
 
   while(user_input[i] != '\0'){
     //end of word
-    if(user_input[i] == ' '){
+    if(user_input[i] == ' ' || user_input[i] == '\n'){
       //define and allocate to heap
       word_type * new_word = NULL;
       new_word = (struct word_struct*)malloc(sizeof(struct word_struct));
@@ -57,8 +56,6 @@ void split(){
     else if(strchr("!?.-;\"$%£'{}()[]*+/\\:<>=@^_`¬~#", user_input[i]) != NULL){
       if(strchr("?", user_input[i]) != NULL){punctuation = 1;}
     }
-    //carriage return
-    else if(user_input[i] == '\n'){}
     //found new character
     else{
       string[string_index] = user_input[i];
@@ -71,7 +68,7 @@ void split(){
 int parse_free(){
   word_type * temp;
 
-  while(temp->next != NULL){
+  while(temp != NULL){
     temp = word_head;
     free(word_head->word);
     word_head = word_head->next;

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<responses>
+<personal_responses>
+  <ada_statement>
+  </ada_statement>
+  <ada_question>
+  </ada_question>
+  <user_statement>
+  </user_statement>
+  <user_question>
+  </user_question>
+</personal_responses>
+<film_responses>
+  <ada_statement>
+  </ada_statement>
+  <ada_question>
+  </ada_question>
+  <user_statement>
+  </user_statement>
+  <user_question>
+  </user_question>
+</film_responses>
+<tv_responses>
+  <ada_statement>
+  </ada_statement>
+  <ada_question>
+  </ada_question>
+  <user_statement>
+  </user_statement>
+  <user_question>
+  </user_question>
+</tv_responses>
+<music_responses>
+  <ada_statement>
+  </ada_statement>
+  <ada_question>
+  </ada_question>
+  <user_statement>
+  </user_statement>
+  <user_question>
+  </user_question>
+</music_responses>
+<game_responses>
+  <ada_statement>
+  </ada_statement>
+  <ada_question>
+  </ada_question>
+  <user_statement>
+  </user_statement>
+  <user_question>
+  </user_question>
+</game_responses>
+<book_responses>
+  <ada_statement>
+  </ada_statement>
+  <ada_question>
+  </ada_question>
+  <user_statement>
+  </user_statement>
+  <user_question>
+  </user_question>
+</book_responses>
+</responses>

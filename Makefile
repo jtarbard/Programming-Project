@@ -150,6 +150,33 @@ interface.c.s:
 	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interface.c.s
 .PHONY : interface.c.s
 
+interpret.o: interpret.c.o
+
+.PHONY : interpret.o
+
+# target to build an object file
+interpret.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interpret.c.o
+.PHONY : interpret.c.o
+
+interpret.i: interpret.c.i
+
+.PHONY : interpret.i
+
+# target to preprocess a source file
+interpret.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interpret.c.i
+.PHONY : interpret.c.i
+
+interpret.s: interpret.c.s
+
+.PHONY : interpret.s
+
+# target to generate assembly for a file
+interpret.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interpret.c.s
+.PHONY : interpret.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -243,6 +270,9 @@ help:
 	@echo "... interface.o"
 	@echo "... interface.i"
 	@echo "... interface.s"
+	@echo "... interpret.o"
+	@echo "... interpret.i"
+	@echo "... interpret.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
