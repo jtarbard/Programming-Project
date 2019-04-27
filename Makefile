@@ -231,6 +231,33 @@ parse.c.s:
 	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/parse.c.s
 .PHONY : parse.c.s
 
+response.o: response.c.o
+
+.PHONY : response.o
+
+# target to build an object file
+response.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/response.c.o
+.PHONY : response.c.o
+
+response.i: response.c.i
+
+.PHONY : response.i
+
+# target to preprocess a source file
+response.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/response.c.i
+.PHONY : response.c.i
+
+response.s: response.c.s
+
+.PHONY : response.s
+
+# target to generate assembly for a file
+response.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/response.c.s
+.PHONY : response.c.s
+
 score.o: score.c.o
 
 .PHONY : score.o
@@ -279,6 +306,9 @@ help:
 	@echo "... parse.o"
 	@echo "... parse.i"
 	@echo "... parse.s"
+	@echo "... response.o"
+	@echo "... response.i"
+	@echo "... response.s"
 	@echo "... score.o"
 	@echo "... score.i"
 	@echo "... score.s"

@@ -2,23 +2,24 @@
 #include "interpret.h"
 #include "parse.h"
 #include "score.h"
+#include "response.h"
 #include <stdio.h>
 #include <string.h>
 
 int main( int argc, char **argv ) {
-  //intro
+  //interface.c
   interface();
-  //
+  //parse.c
   scan();
   split();
-  //
-  // // printf("question score: %d\n", score_question());
-  // // printf("subject score: %d\n", score_subject());
-  //
+  //interpret.c
   score_topics();
   get_response();
-  // //end of chat line
-  printf("--Chat:Ended------------\n");
+  //response.c
+  respond(response);
+  //interface.c
+  end_print();
+  //parse.c
   parse_free();
   return 0;
 }

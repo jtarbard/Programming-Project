@@ -91,42 +91,45 @@ void score_topics(){
   struct word_struct * current;
   current = word_head;
 
-  while(found == 0 && current != NULL){
+  while(found == 0 && current != NULL && current->word != NULL){
     for(i = 0; i < 6; i++){
       for(j = 0; j < 4; j++){
-        // printf("topics[%d][%d]: %s - current: %s\n", i, j, topics[i][j], current->word);
-          if((strstr(topics[i][j], current->word) != NULL) && (strlen(topics[i][j]) <= strlen(current->word))){
-            // printf("found word!\n" );
-            user_topics_index = j;
-            if(i == 0){
-              user_topics = "personal";
-            }
-            else if(i == 1){
-              user_topics = "films";
-            }
-            else if(i == 2){
-              user_topics = "tv";
-            }
-            else if(i == 3){
-              user_topics = "music";
-            }
-            else if(i == 4){
-              user_topics = "games";
-            }
-            else if(i == 5){
-              user_topics = "books";
-            }
-            else{
-              printf("err\n");
-            }
-
-            blind = 0;
-            found = 1;
-            i = 7;
-            j = 5;
+        if((strstr(topics[i][j], current->word)) == topics[i][j]){
+          // printf("found word!\n" );
+          user_topics_index = j;
+          if(i == 0){
+            user_topics = "personal";
           }
+          else if(i == 1){
+            user_topics = "films";
+          }
+          else if(i == 2){
+            user_topics = "tv";
+          }
+          else if(i == 3){
+            user_topics = "music";
+          }
+          else if(i == 4){
+            user_topics = "games";
+          }
+          else if(i == 5){
+            user_topics = "books";
+          }
+          else{
+            printf("err\n");
+          }
+
+          blind = 0;
+          found = 1;
+          i = 7;
+          j = 5;
+        }
       }
     }
     current = current->next;
+  }
+
+  if(blind == 1){
+    user_topics = "\0";
   }
 }

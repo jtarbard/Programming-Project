@@ -47,21 +47,26 @@ int response_calc(response_type arr[], int index){
 }
 
 int get_response(){
-  if(user_topics != NULL){
+  if(blind == 0){
     // printf("us_to: %s\n", user_topics);
     if(strstr(user_topics, "personal") != NULL){
       response_calc(personal, user_topics_index);
     }
-    else if(strstr(user_topics, "films") != NULL){}
-    else if(strstr(user_topics, "tv") != NULL){}
-    else if(strstr(user_topics, "games") != NULL){}
-    else if(strstr(user_topics, "books") != NULL){}
-    else{}
-
-    printf("> ada: %s\n", response);
+    else if(strstr(user_topics, "films") != NULL){
+      response_calc(personal, user_topics_index);
+    }
+    else if(strstr(user_topics, "tv") != NULL){
+      response_calc(personal, user_topics_index);
+    }
+    else if(strstr(user_topics, "games") != NULL){
+      response_calc(personal, user_topics_index);
+    }
+    else if(strstr(user_topics, "books") != NULL){
+      response_calc(personal, user_topics_index);
+    }
+    else{response = "No response found...";}
   }
   else{
     printf("GET_RESPONSE HAS NO TOPIC\n");
-
   }
 }

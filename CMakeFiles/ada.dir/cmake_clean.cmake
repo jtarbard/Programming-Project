@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ada.dir/parse.c.o"
   "CMakeFiles/ada.dir/score.c.o"
   "CMakeFiles/ada.dir/interpret.c.o"
+  "CMakeFiles/ada.dir/response.c.o"
   "ada.pdb"
   "ada"
 )

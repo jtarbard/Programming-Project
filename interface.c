@@ -38,6 +38,11 @@ int get_username(){
   printf("--Chat:Begun------------\n");
 }
 
+int end_print(){
+  printf("--Chat:Ended------------\n");
+  return 0;
+}
+
 int interface(){
   print_welcome();
   get_username();

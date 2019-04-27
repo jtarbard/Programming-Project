@@ -5,5 +5,6 @@ typedef struct response_struct {
   char* user_question;
 } response_type;
 
+char* response;
 int response_calc(response_type arr[], int index);
 int get_response();
