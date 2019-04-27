@@ -7,9 +7,9 @@ char *user_topics;
 int user_topics_index = 0;
 int blind = 1;
 
-char *subject[2][5] = {
-  {"ur","your","you're", "you", "ada"},
-  {"me","mine","my","im","i"}
+char *subject[2][6] = {
+  {"ur","your","youre", "yours", "you", "ada"},
+  {"me","mine","my","im","i", ""}
 };
 
 char *question[9] = {"what","when","where","which","who","whoose","why","how","?"};
@@ -54,16 +54,16 @@ int score_question(){
 }
 
 int score_subject(){
-  int user = 0, ada = 0, i, j;
+  int user = 0, ada = 0, word_index = 10, i, j;
   struct word_struct * current = word_head;
 
   while(current->next != NULL){
     for(i = 0; i < 2; i++){
-      for(j = 0; j < 5; j++){
+      for(j = 0; j < 6; j++){
         if(subject[i][j] != "\0"){
           if(strstr(subject[i][j], current->word) != NULL){
-            if(i == 0){ada += 5-j;}
-            else if(i == 1){user += 5-j;}
+            if(i == 0){ada += word_index;}
+            else if(i == 1){user += word_index;}
             i = 2;
             j = 5;
           }
@@ -71,7 +71,9 @@ int score_subject(){
       }
     }
     current = current->next;
+    word_index--;
   }
+  // printf("a:%d u:%d\n", ada, user);
   //score
   if(ada == user){
     return 2; //no subject found
@@ -92,9 +94,9 @@ void score_topics(){
   while(found == 0 && current != NULL){
     for(i = 0; i < 6; i++){
       for(j = 0; j < 4; j++){
-        printf("topics[%d][%d]: %s - current: %s\n", i, j, topics[i][j], current->word);
-          if(topics[i][j] = current->word){
-            printf("found word!\n" );
+        // printf("topics[%d][%d]: %s - current: %s\n", i, j, topics[i][j], current->word);
+          if((strstr(topics[i][j], current->word) != NULL) && (strlen(topics[i][j]) <= strlen(current->word))){
+            // printf("found word!\n" );
             user_topics_index = j;
             if(i == 0){
               user_topics = "personal";

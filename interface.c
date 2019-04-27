@@ -27,7 +27,7 @@ int print_welcome(){
 int get_username(){
   printf("Enter screen name: ");
   fgets(user_name, 20, stdin);
-  printf("%c\n", user_name[strlen(user_name)]);
+  printf("%c", user_name[strlen(user_name)]);
 
   //prevents username carriage return
   char *newline;

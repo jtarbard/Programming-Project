@@ -72,6 +72,9 @@ void parse_free(){
 
   while (word_head) {
   list_ptr = word_head;
+  if(list_ptr->word != NULL){
+    free(list_ptr->word);
+  }
   word_head = list_ptr->next;
   free(list_ptr);
   }
