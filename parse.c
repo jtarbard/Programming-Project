@@ -1,4 +1,5 @@
 #include "interface.h"
+#include "response.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,8 +12,9 @@ typedef struct word_struct {
 word_type * word_head = NULL;
 //inital input char array
 char user_input[302];
-int punctuation = 0;
 char user_name[20];
+char *string;
+int punctuation = 0;
 
 int scan(){
   printf("> %s: ", user_name);
@@ -26,19 +28,29 @@ int scan(){
   } //exceeded buffer
 }
 
-void split(){
-  int i = 0;
-  char *string;
-  string = malloc(sizeof(sizeof(char) * 30));
+int split(){
+  int exit_check = 0, i = 0;
+  //STRING MOLLOC WAS HERE
   //strcat workaround
   char strcat_fix[2];
   strcat_fix[1] = '\0';
 
-  word_head = malloc(sizeof(word_type));
+  //WORD_HEAD MALLOC WAS HERE
 
   while(user_input[i] != '\0'){
     //end of word
     if(user_input[i] == ' ' || user_input[i] == '\n'){
+      if(exit_check == 0){
+        if(strstr("goodbye cya exit quit", string) != NULL){
+          respond("Farwell!");
+          free(string);
+          free(word_head);
+          return 1;
+        }
+        else{
+          exit_check = 1;
+        }
+      }
       //define and allocate to heap
       word_type * new_word = NULL;
       new_word = (struct word_struct*)malloc(sizeof(struct word_struct));
@@ -65,9 +77,16 @@ void split(){
     i++;
   }
   free(string);
+  return 0;
 }
 
-void parse_free(){
+int parse_malloc(){
+    string = malloc(sizeof(sizeof(char) * 30));
+    word_head = malloc(sizeof(word_type));
+    return 0;
+}
+
+int parse_free(){
   word_type * list_ptr;
 
   while (word_head) {

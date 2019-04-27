@@ -12,6 +12,7 @@ int punctuation;
 
 //functions
 int scan();
-void split();
-void run();
+int split();
+int run();
+int parse_malloc();
 int parse_free();

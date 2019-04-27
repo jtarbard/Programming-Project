@@ -7,19 +7,24 @@
 #include <string.h>
 
 int main( int argc, char **argv ) {
+  int end;
   //interface.c
   interface();
-  //parse.c
-  scan();
-  split();
-  //interpret.c
-  score_topics();
-  get_response();
-  //response.c
-  respond(response);
+  while(end == 0){
+    //parse.c
+    parse_malloc();
+    scan();
+    end = split();
+    //interpret.c
+    score_topics();
+    get_response();
+    //response.c
+    respond(response);
+    //parse.c
+    parse_free();
+  }
+
   //interface.c
   end_print();
-  //parse.c
-  parse_free();
   return 0;
 }
