@@ -76,7 +76,7 @@ int split(){
       new_word->word = strdup(string);
       new_word->next = word_head;
       word_head = new_word;
-      printf("parse.c: %s\n", word_head->word);
+      // printf("parse.c: %s\n", word_head->word);
       strcpy(string, "");
       // end of stream
       if(user_input[i] == '\0'){ //SEGFAULT

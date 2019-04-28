@@ -8,6 +8,7 @@ typedef struct word_struct {
 word_type * word_head;
 
 char user_input[302];
+char user_name[20];
 int punctuation;
 
 //functions

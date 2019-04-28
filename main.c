@@ -20,6 +20,7 @@ int main( int argc, char **argv ) {
     }
     else{
       //interpret.c
+      score_emotion();
       score_topics();
       get_response();
       //response.c

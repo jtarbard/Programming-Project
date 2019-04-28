@@ -1,6 +1,7 @@
 char *user_topics;
 int user_topics_index;
-int blind;
+int favourite;
 int score_subject();
 int score_question();
-void score_topics();
+int score_emotion();
+int score_topics();

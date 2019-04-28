@@ -35,7 +35,7 @@ int get_username(){
     *newline = '\0';
   }
 
-  printf("When you're done talking to ada use goodbye,\n cya, quit or exit to close the program.\n");
+  printf("When you're done talking to ada\nuse goodbye to exit the program.\n");
   printf("--Chat:Begun------------\n");
 }
 
