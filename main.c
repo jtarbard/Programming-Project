@@ -15,13 +15,18 @@ int main( int argc, char **argv ) {
     parse_malloc();
     scan();
     end = split();
-    //interpret.c
-    score_topics();
-    get_response();
-    //response.c
-    respond(response);
-    //parse.c
-    parse_free();
+    if(end == 1){
+      parse_free();
+    }
+    else{
+      //interpret.c
+      score_topics();
+      get_response();
+      //response.c
+      respond(response);
+      //parse.c
+      parse_free();
+    }
   }
 
   //interface.c

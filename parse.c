@@ -13,8 +13,26 @@ word_type * word_head;
 //inital input char array
 char user_input[302];
 char user_name[20];
-char *string;
 int punctuation = 0;
+
+int parse_malloc(){
+  word_type * word_head = NULL;
+  return 0;
+}
+
+int parse_free(){
+  word_type * list_ptr;
+
+  while(word_head != NULL) {
+    list_ptr = word_head;
+    if(list_ptr->word != NULL){
+      free(list_ptr->word); //SEGFAULT
+    }
+    word_head = list_ptr->next;
+    free(list_ptr);
+  }
+  free(word_head);
+}
 
 int scan(){
   printf("> %s: ", user_name);
@@ -30,21 +48,21 @@ int scan(){
 
 int split(){
   int exit_check = 0, i = 0;
-  //STRING MOLLOC WAS HERE
+  char *string;
+  string = malloc(sizeof(sizeof(char) * 30));
+  strcpy(string, "");
   //strcat workaround
   char strcat_fix[2];
   strcat_fix[1] = '\0';
-
-  //WORD_HEAD MALLOC WAS HERE
 
   while(user_input[i] != '\0'){
     //end of word
     if(user_input[i] == ' ' || user_input[i] == '\n'){
       if(exit_check == 0){
-        if(strstr("goodbye_cya_exit_quit", string) != NULL){
+        if(strstr("goodbye", string) != NULL){
           respond("Farwell!");
           free(string);
-          free(word_head);
+          parse_free();
           return 1;
         }
         else{
@@ -77,26 +95,6 @@ int split(){
     }
     i++;
   }
-  // free(string);
+  free(string);
   return 0;
-}
-
-int parse_malloc(){
-    word_type * word_head = NULL;
-    string = malloc(sizeof(sizeof(char) * 30));
-    word_head = malloc(sizeof(word_type));
-    return 0;
-}
-
-int parse_free(){
-  word_type * list_ptr;
-
-  while(word_head != NULL) {
-  list_ptr = word_head;
-  // if(list_ptr->word != NULL){
-  //   // free(list_ptr->word); //SEGFAULT
-  // }
-  word_head = list_ptr->next;
-  free(list_ptr);
-  }
 }
