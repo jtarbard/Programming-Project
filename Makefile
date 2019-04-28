@@ -123,167 +123,167 @@ ada/fast:
 	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/build
 .PHONY : ada/fast
 
-interface.o: interface.c.o
+src/interface.o: src/interface.c.o
 
-.PHONY : interface.o
-
-# target to build an object file
-interface.c.o:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interface.c.o
-.PHONY : interface.c.o
-
-interface.i: interface.c.i
-
-.PHONY : interface.i
-
-# target to preprocess a source file
-interface.c.i:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interface.c.i
-.PHONY : interface.c.i
-
-interface.s: interface.c.s
-
-.PHONY : interface.s
-
-# target to generate assembly for a file
-interface.c.s:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interface.c.s
-.PHONY : interface.c.s
-
-interpret.o: interpret.c.o
-
-.PHONY : interpret.o
+.PHONY : src/interface.o
 
 # target to build an object file
-interpret.c.o:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interpret.c.o
-.PHONY : interpret.c.o
+src/interface.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/interface.c.o
+.PHONY : src/interface.c.o
 
-interpret.i: interpret.c.i
+src/interface.i: src/interface.c.i
 
-.PHONY : interpret.i
+.PHONY : src/interface.i
 
 # target to preprocess a source file
-interpret.c.i:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interpret.c.i
-.PHONY : interpret.c.i
+src/interface.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/interface.c.i
+.PHONY : src/interface.c.i
 
-interpret.s: interpret.c.s
+src/interface.s: src/interface.c.s
 
-.PHONY : interpret.s
+.PHONY : src/interface.s
 
 # target to generate assembly for a file
-interpret.c.s:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/interpret.c.s
-.PHONY : interpret.c.s
+src/interface.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/interface.c.s
+.PHONY : src/interface.c.s
 
-main.o: main.c.o
+src/interpret.o: src/interpret.c.o
 
-.PHONY : main.o
+.PHONY : src/interpret.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/main.c.o
-.PHONY : main.c.o
+src/interpret.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/interpret.c.o
+.PHONY : src/interpret.c.o
 
-main.i: main.c.i
+src/interpret.i: src/interpret.c.i
 
-.PHONY : main.i
+.PHONY : src/interpret.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/main.c.i
-.PHONY : main.c.i
+src/interpret.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/interpret.c.i
+.PHONY : src/interpret.c.i
 
-main.s: main.c.s
+src/interpret.s: src/interpret.c.s
 
-.PHONY : main.s
+.PHONY : src/interpret.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/main.c.s
-.PHONY : main.c.s
+src/interpret.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/interpret.c.s
+.PHONY : src/interpret.c.s
 
-parse.o: parse.c.o
+src/main.o: src/main.c.o
 
-.PHONY : parse.o
+.PHONY : src/main.o
 
 # target to build an object file
-parse.c.o:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/parse.c.o
-.PHONY : parse.c.o
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-parse.i: parse.c.i
+src/main.i: src/main.c.i
 
-.PHONY : parse.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-parse.c.i:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/parse.c.i
-.PHONY : parse.c.i
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-parse.s: parse.c.s
+src/main.s: src/main.c.s
 
-.PHONY : parse.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-parse.c.s:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/parse.c.s
-.PHONY : parse.c.s
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/main.c.s
+.PHONY : src/main.c.s
 
-response.o: response.c.o
+src/parse.o: src/parse.c.o
 
-.PHONY : response.o
+.PHONY : src/parse.o
 
 # target to build an object file
-response.c.o:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/response.c.o
-.PHONY : response.c.o
+src/parse.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/parse.c.o
+.PHONY : src/parse.c.o
 
-response.i: response.c.i
+src/parse.i: src/parse.c.i
 
-.PHONY : response.i
+.PHONY : src/parse.i
 
 # target to preprocess a source file
-response.c.i:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/response.c.i
-.PHONY : response.c.i
+src/parse.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/parse.c.i
+.PHONY : src/parse.c.i
 
-response.s: response.c.s
+src/parse.s: src/parse.c.s
 
-.PHONY : response.s
+.PHONY : src/parse.s
 
 # target to generate assembly for a file
-response.c.s:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/response.c.s
-.PHONY : response.c.s
+src/parse.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/parse.c.s
+.PHONY : src/parse.c.s
 
-score.o: score.c.o
+src/response.o: src/response.c.o
 
-.PHONY : score.o
+.PHONY : src/response.o
 
 # target to build an object file
-score.c.o:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/score.c.o
-.PHONY : score.c.o
+src/response.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/response.c.o
+.PHONY : src/response.c.o
 
-score.i: score.c.i
+src/response.i: src/response.c.i
 
-.PHONY : score.i
+.PHONY : src/response.i
 
 # target to preprocess a source file
-score.c.i:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/score.c.i
-.PHONY : score.c.i
+src/response.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/response.c.i
+.PHONY : src/response.c.i
 
-score.s: score.c.s
+src/response.s: src/response.c.s
 
-.PHONY : score.s
+.PHONY : src/response.s
 
 # target to generate assembly for a file
-score.c.s:
-	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/score.c.s
-.PHONY : score.c.s
+src/response.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/response.c.s
+.PHONY : src/response.c.s
+
+src/score.o: src/score.c.o
+
+.PHONY : src/score.o
+
+# target to build an object file
+src/score.c.o:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/score.c.o
+.PHONY : src/score.c.o
+
+src/score.i: src/score.c.i
+
+.PHONY : src/score.i
+
+# target to preprocess a source file
+src/score.c.i:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/score.c.i
+.PHONY : src/score.c.i
+
+src/score.s: src/score.c.s
+
+.PHONY : src/score.s
+
+# target to generate assembly for a file
+src/score.c.s:
+	$(MAKE) -f CMakeFiles/ada.dir/build.make CMakeFiles/ada.dir/src/score.c.s
+.PHONY : src/score.c.s
 
 # Help Target
 help:
@@ -294,24 +294,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ada"
 	@echo "... edit_cache"
-	@echo "... interface.o"
-	@echo "... interface.i"
-	@echo "... interface.s"
-	@echo "... interpret.o"
-	@echo "... interpret.i"
-	@echo "... interpret.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... parse.o"
-	@echo "... parse.i"
-	@echo "... parse.s"
-	@echo "... response.o"
-	@echo "... response.i"
-	@echo "... response.s"
-	@echo "... score.o"
-	@echo "... score.i"
-	@echo "... score.s"
+	@echo "... src/interface.o"
+	@echo "... src/interface.i"
+	@echo "... src/interface.s"
+	@echo "... src/interpret.o"
+	@echo "... src/interpret.i"
+	@echo "... src/interpret.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/parse.o"
+	@echo "... src/parse.i"
+	@echo "... src/parse.s"
+	@echo "... src/response.o"
+	@echo "... src/response.i"
+	@echo "... src/response.s"
+	@echo "... src/score.o"
+	@echo "... src/score.i"
+	@echo "... src/score.s"
 .PHONY : help
 
 

@@ -57,102 +57,102 @@ include CMakeFiles/ada.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ada.dir/flags.make
 
-CMakeFiles/ada.dir/main.c.o: CMakeFiles/ada.dir/flags.make
-CMakeFiles/ada.dir/main.c.o: main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ada.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/main.c.o   -c /home/jasmine/Documents/git/ada-chatbot/main.c
+CMakeFiles/ada.dir/src/main.c.o: CMakeFiles/ada.dir/flags.make
+CMakeFiles/ada.dir/src/main.c.o: src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ada.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/src/main.c.o   -c /home/jasmine/Documents/git/ada-chatbot/src/main.c
 
-CMakeFiles/ada.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/main.c > CMakeFiles/ada.dir/main.c.i
+CMakeFiles/ada.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/src/main.c > CMakeFiles/ada.dir/src/main.c.i
 
-CMakeFiles/ada.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/main.c -o CMakeFiles/ada.dir/main.c.s
+CMakeFiles/ada.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/src/main.c -o CMakeFiles/ada.dir/src/main.c.s
 
-CMakeFiles/ada.dir/interface.c.o: CMakeFiles/ada.dir/flags.make
-CMakeFiles/ada.dir/interface.c.o: interface.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ada.dir/interface.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/interface.c.o   -c /home/jasmine/Documents/git/ada-chatbot/interface.c
+CMakeFiles/ada.dir/src/interface.c.o: CMakeFiles/ada.dir/flags.make
+CMakeFiles/ada.dir/src/interface.c.o: src/interface.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ada.dir/src/interface.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/src/interface.c.o   -c /home/jasmine/Documents/git/ada-chatbot/src/interface.c
 
-CMakeFiles/ada.dir/interface.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/interface.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/interface.c > CMakeFiles/ada.dir/interface.c.i
+CMakeFiles/ada.dir/src/interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/src/interface.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/src/interface.c > CMakeFiles/ada.dir/src/interface.c.i
 
-CMakeFiles/ada.dir/interface.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/interface.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/interface.c -o CMakeFiles/ada.dir/interface.c.s
+CMakeFiles/ada.dir/src/interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/src/interface.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/src/interface.c -o CMakeFiles/ada.dir/src/interface.c.s
 
-CMakeFiles/ada.dir/parse.c.o: CMakeFiles/ada.dir/flags.make
-CMakeFiles/ada.dir/parse.c.o: parse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ada.dir/parse.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/parse.c.o   -c /home/jasmine/Documents/git/ada-chatbot/parse.c
+CMakeFiles/ada.dir/src/parse.c.o: CMakeFiles/ada.dir/flags.make
+CMakeFiles/ada.dir/src/parse.c.o: src/parse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ada.dir/src/parse.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/src/parse.c.o   -c /home/jasmine/Documents/git/ada-chatbot/src/parse.c
 
-CMakeFiles/ada.dir/parse.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/parse.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/parse.c > CMakeFiles/ada.dir/parse.c.i
+CMakeFiles/ada.dir/src/parse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/src/parse.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/src/parse.c > CMakeFiles/ada.dir/src/parse.c.i
 
-CMakeFiles/ada.dir/parse.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/parse.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/parse.c -o CMakeFiles/ada.dir/parse.c.s
+CMakeFiles/ada.dir/src/parse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/src/parse.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/src/parse.c -o CMakeFiles/ada.dir/src/parse.c.s
 
-CMakeFiles/ada.dir/score.c.o: CMakeFiles/ada.dir/flags.make
-CMakeFiles/ada.dir/score.c.o: score.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ada.dir/score.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/score.c.o   -c /home/jasmine/Documents/git/ada-chatbot/score.c
+CMakeFiles/ada.dir/src/score.c.o: CMakeFiles/ada.dir/flags.make
+CMakeFiles/ada.dir/src/score.c.o: src/score.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ada.dir/src/score.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/src/score.c.o   -c /home/jasmine/Documents/git/ada-chatbot/src/score.c
 
-CMakeFiles/ada.dir/score.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/score.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/score.c > CMakeFiles/ada.dir/score.c.i
+CMakeFiles/ada.dir/src/score.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/src/score.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/src/score.c > CMakeFiles/ada.dir/src/score.c.i
 
-CMakeFiles/ada.dir/score.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/score.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/score.c -o CMakeFiles/ada.dir/score.c.s
+CMakeFiles/ada.dir/src/score.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/src/score.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/src/score.c -o CMakeFiles/ada.dir/src/score.c.s
 
-CMakeFiles/ada.dir/interpret.c.o: CMakeFiles/ada.dir/flags.make
-CMakeFiles/ada.dir/interpret.c.o: interpret.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ada.dir/interpret.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/interpret.c.o   -c /home/jasmine/Documents/git/ada-chatbot/interpret.c
+CMakeFiles/ada.dir/src/interpret.c.o: CMakeFiles/ada.dir/flags.make
+CMakeFiles/ada.dir/src/interpret.c.o: src/interpret.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ada.dir/src/interpret.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/src/interpret.c.o   -c /home/jasmine/Documents/git/ada-chatbot/src/interpret.c
 
-CMakeFiles/ada.dir/interpret.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/interpret.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/interpret.c > CMakeFiles/ada.dir/interpret.c.i
+CMakeFiles/ada.dir/src/interpret.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/src/interpret.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/src/interpret.c > CMakeFiles/ada.dir/src/interpret.c.i
 
-CMakeFiles/ada.dir/interpret.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/interpret.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/interpret.c -o CMakeFiles/ada.dir/interpret.c.s
+CMakeFiles/ada.dir/src/interpret.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/src/interpret.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/src/interpret.c -o CMakeFiles/ada.dir/src/interpret.c.s
 
-CMakeFiles/ada.dir/response.c.o: CMakeFiles/ada.dir/flags.make
-CMakeFiles/ada.dir/response.c.o: response.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ada.dir/response.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/response.c.o   -c /home/jasmine/Documents/git/ada-chatbot/response.c
+CMakeFiles/ada.dir/src/response.c.o: CMakeFiles/ada.dir/flags.make
+CMakeFiles/ada.dir/src/response.c.o: src/response.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ada.dir/src/response.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ada.dir/src/response.c.o   -c /home/jasmine/Documents/git/ada-chatbot/src/response.c
 
-CMakeFiles/ada.dir/response.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/response.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/response.c > CMakeFiles/ada.dir/response.c.i
+CMakeFiles/ada.dir/src/response.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ada.dir/src/response.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jasmine/Documents/git/ada-chatbot/src/response.c > CMakeFiles/ada.dir/src/response.c.i
 
-CMakeFiles/ada.dir/response.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/response.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/response.c -o CMakeFiles/ada.dir/response.c.s
+CMakeFiles/ada.dir/src/response.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ada.dir/src/response.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jasmine/Documents/git/ada-chatbot/src/response.c -o CMakeFiles/ada.dir/src/response.c.s
 
 # Object files for target ada
 ada_OBJECTS = \
-"CMakeFiles/ada.dir/main.c.o" \
-"CMakeFiles/ada.dir/interface.c.o" \
-"CMakeFiles/ada.dir/parse.c.o" \
-"CMakeFiles/ada.dir/score.c.o" \
-"CMakeFiles/ada.dir/interpret.c.o" \
-"CMakeFiles/ada.dir/response.c.o"
+"CMakeFiles/ada.dir/src/main.c.o" \
+"CMakeFiles/ada.dir/src/interface.c.o" \
+"CMakeFiles/ada.dir/src/parse.c.o" \
+"CMakeFiles/ada.dir/src/score.c.o" \
+"CMakeFiles/ada.dir/src/interpret.c.o" \
+"CMakeFiles/ada.dir/src/response.c.o"
 
 # External object files for target ada
 ada_EXTERNAL_OBJECTS =
 
-ada: CMakeFiles/ada.dir/main.c.o
-ada: CMakeFiles/ada.dir/interface.c.o
-ada: CMakeFiles/ada.dir/parse.c.o
-ada: CMakeFiles/ada.dir/score.c.o
-ada: CMakeFiles/ada.dir/interpret.c.o
-ada: CMakeFiles/ada.dir/response.c.o
+ada: CMakeFiles/ada.dir/src/main.c.o
+ada: CMakeFiles/ada.dir/src/interface.c.o
+ada: CMakeFiles/ada.dir/src/parse.c.o
+ada: CMakeFiles/ada.dir/src/score.c.o
+ada: CMakeFiles/ada.dir/src/interpret.c.o
+ada: CMakeFiles/ada.dir/src/response.c.o
 ada: CMakeFiles/ada.dir/build.make
 ada: CMakeFiles/ada.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jasmine/Documents/git/ada-chatbot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable ada"
