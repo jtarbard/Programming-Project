@@ -9,7 +9,7 @@ typedef struct word_struct {
     char *word;
     struct word_struct * next;
 } word_type;
-word_type * word_head = NULL;
+word_type * word_head;
 //inital input char array
 char user_input[302];
 char user_name[20];
@@ -41,7 +41,7 @@ int split(){
     //end of word
     if(user_input[i] == ' ' || user_input[i] == '\n'){
       if(exit_check == 0){
-        if(strstr("goodbye cya exit quit", string) != NULL){
+        if(strstr("goodbye_cya_exit_quit", string) != NULL){
           respond("Farwell!");
           free(string);
           free(word_head);
@@ -58,10 +58,10 @@ int split(){
       new_word->word = strdup(string);
       new_word->next = word_head;
       word_head = new_word;
-
+      printf("parse.c: %s\n", word_head->word);
       strcpy(string, "");
-      //end of stream
-      if(user_input[i] == '\0'){
+      // end of stream
+      if(user_input[i] == '\0'){ //SEGFAULT
         i = 302;
       }
     }
@@ -71,16 +71,18 @@ int split(){
     }
     //found new character
     else{
+      // printf("%c", user_input[i]);
       strcat_fix[0] = user_input[i];
       strcat(string, strcat_fix);
     }
     i++;
   }
-  free(string);
+  // free(string);
   return 0;
 }
 
 int parse_malloc(){
+    word_type * word_head = NULL;
     string = malloc(sizeof(sizeof(char) * 30));
     word_head = malloc(sizeof(word_type));
     return 0;
@@ -89,11 +91,11 @@ int parse_malloc(){
 int parse_free(){
   word_type * list_ptr;
 
-  while (word_head) {
+  while(word_head != NULL) {
   list_ptr = word_head;
-  if(list_ptr->word != NULL){
-    free(list_ptr->word);
-  }
+  // if(list_ptr->word != NULL){
+  //   // free(list_ptr->word); //SEGFAULT
+  // }
   word_head = list_ptr->next;
   free(list_ptr);
   }

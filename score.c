@@ -57,11 +57,12 @@ int score_subject(){
   int user = 0, ada = 0, word_index = 10, i, j;
   struct word_struct * current = word_head;
 
-  while(current->next != NULL){
+  while(current != NULL){
     for(i = 0; i < 2; i++){
       for(j = 0; j < 6; j++){
         if(subject[i][j] != "\0"){
-          if(strstr(subject[i][j], current->word) != NULL){
+          // if(strstr(subject[i][j], current->word) != NULL)
+          if(current->word != NULL && subject[i][j] == current->word){
             if(i == 0){ada += word_index;}
             else if(i == 1){user += word_index;}
             i = 2;
@@ -92,6 +93,7 @@ void score_topics(){
   current = word_head;
 
   while(found == 0 && current != NULL && current->word != NULL){
+    printf("score topics: current: %s\n", current->word);
     for(i = 0; i < 6; i++){
       for(j = 0; j < 4; j++){
         if((strstr(topics[i][j], current->word)) == topics[i][j]){
