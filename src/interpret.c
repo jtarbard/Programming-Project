@@ -1,6 +1,7 @@
 #include "parse.h"
 #include "score.h"
 #include <stdio.h>
+#include <time.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -105,6 +106,13 @@ response_type books[] = {
     "I have, it was okay."
 };
 
+char * unknown[] = {
+  "Pardon?",
+  "I didn't quite get that, sorry.",
+  "Did you know Ada Lovelace wrote extensively to her mother of the work she was doing in composing music based on numbers, a potential application she envisioned for the Analytic Engine.",
+  "Did you know Ada Lovelace, encouraged by con men, turned her talents to programming the outcomes of horse races where she lost a fortune and had to secretly pawn the Lovelace family’s diamonds."
+};
+
 int response_calc(response_type arr[], int index){
   int ada, question;
   ada = score_subject();
@@ -127,6 +135,13 @@ int response_calc(response_type arr[], int index){
       response = arr[index].ada_question;
     }
   }
+}
+
+int get_random(){
+    int i, upper = 3, lower = 0;
+    srand(time(0));
+    int num = (rand() % (upper - lower + 1)) + lower;
+    return num;
 }
 
 int get_response(){
@@ -173,6 +188,8 @@ int get_response(){
         response = books[0].ada_favourite;
       }
     }
-    else{response = "No response found...";}
+    else{
+      response = unknown[get_random()];
+    }
   }
 }

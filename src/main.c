@@ -7,13 +7,17 @@
 #include <string.h>
 
 int main( int argc, char **argv ) {
-  int end;
+  int inp_val, end;
   //interface.c
   interface();
   while(end == 0){
     //parse.c
     parse_malloc();
-    scan();
+    inp_val = scan();
+    while(inp_val != 0){
+      respond("Conversation is a two person tango, it's no fun if you don't speak...");
+      inp_val = scan();
+    }
     end = split();
     if(end == 1){
       parse_free();

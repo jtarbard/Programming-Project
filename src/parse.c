@@ -37,13 +37,12 @@ int parse_free(){
 int scan(){
   printf("> %s: ", user_name);
   fgets(user_input, 302, stdin);
-
-  if(strrchr(user_input, '\n') != NULL){
-    return 0;
-  } //within buffer
-  else{
+  if(user_input[0] == '\n'){
     return 1;
-  } //exceeded buffer
+  }
+  else{
+    return 0;
+  }
 }
 
 int split(){
